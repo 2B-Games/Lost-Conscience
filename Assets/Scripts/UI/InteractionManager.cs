@@ -8,6 +8,7 @@ public class InteractionManager : MonoBehaviour
     public GameObject InteractButton;
     private bool interaction=false;
     private int whereToGo = 0;
+    private bool isHidden = false;
     private void Awake()
     {
         instance=this;
@@ -17,11 +18,20 @@ public class InteractionManager : MonoBehaviour
         InteractButton.SetActive(false);
     }
 
+    public void HideUi(bool set)
+    {
+        InteractButton.SetActive(false);
+        isHidden = set;
+    }
+
     public void InteractSet(bool set,int lvl)
     {
-        whereToGo = lvl;
-        interaction = set;
-        InteractButton.SetActive(set);
+        if (!isHidden)
+        {
+            whereToGo = lvl;
+            interaction = set;
+            InteractButton.SetActive(set);
+        }
     }
 
     public void ButtonPressed()
@@ -34,7 +44,7 @@ public class InteractionManager : MonoBehaviour
     {
         if (Input.GetKeyDown("e"))
         {
-            if (interaction)
+            if (interaction && !isHidden)
                 ButtonPressed();
         }
     }
