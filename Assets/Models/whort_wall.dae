@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 2.82.7 commit date:2020-03-12, commit time:05:06, hash:375c7dc4caf4</authoring_tool>
+    </contributor>
+    <created>2021-04-12T15:20:37</created>
+    <modified>2021-04-12T15:20:37</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="Wall-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <color sid="diffuse">1 0.4917284 0.218743 1</color>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="dark_Wood-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <color sid="diffuse">0.1844692 0.04402042 0.0176893 1</color>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_images/>
+  <library_materials>
+    <material id="Wall-material" name="Wall">
+      <instance_effect url="#Wall-effect"/>
+    </material>
+    <material id="dark_Wood-material" name="dark_Wood">
+      <instance_effect url="#dark_Wood-effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="Cube_072-mesh" name="Cube.072">
+      <mesh>
+        <source id="Cube_072-mesh-positions">
+          <float_array id="Cube_072-mesh-positions-array" count="60">-1 -1 -1 -1 1 -1 1 -1 -1 1 1 -1 -1 -1 -0.8875097 -1 1 -0.8875097 1 1 -0.8875097 1 -1 -0.8875097 -1 1.497887 -1 -1 -1.497895 -1 -1 1.497887 -0.8875097 1 1.497887 -1 1 1.497887 -0.8875097 1 -1.497895 -1 1 -1.497895 -0.8875097 -1 -1.497895 -0.8875097 -1 -1 -0.1694411 -1 1 -0.1694411 1 1 -0.1694411 1 -1 -0.1694411</float_array>
+          <technique_common>
+            <accessor source="#Cube_072-mesh-positions-array" count="20" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Cube_072-mesh-normals">
+          <float_array id="Cube_072-mesh-normals-array" count="36">0 0 -1 -0.4472137 0 -0.8944272 0 -1 0 1 0 0 0 1 0 -1 0 0 -0.8944273 0 0.4472136 0 0 1 -0.9364914 0 0.3506905 0.4472137 0 -0.8944272 0.9364914 0 0.3506905 0.8944273 0 0.4472136</float_array>
+          <technique_common>
+            <accessor source="#Cube_072-mesh-normals-array" count="12" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Cube_072-mesh-map-0">
+          <float_array id="Cube_072-mesh-map-0-array" count="216">0.375 0.5 0.125 0.75 0.125 0.5 0.125 0.5 0.375 0.5 0.375 0.5 0.3902072 0.75 0.3902072 0.5 0.3902072 0.5 0.3902072 0 0.3902072 0.25 0.3902072 0 0.375 0.75 0.125 0.75 0.125 0.75 0.3902072 0.75 0.375 1 0.375 0.75 0.3902072 0.5 0.375 0.75 0.375 0.5 0.3902072 0.25 0.375 0.5 0.375 0.25 0.3902072 0 0.375 0.25 0.375 0 0.125 0.75 0.125 0.5 0.125 0.5 0.3902072 0.5 0.3902072 0.25 0.3902072 0.25 0.375 0.75 0.375 0.5 0.375 0.75 0.3902072 1 0.3902072 0.75 0.3902072 0.75 0.4872804 0.5 0.3902072 0.75 0.3902072 0.5 0.4872804 0.25 0.3902072 0.5 0.3902072 0.25 0.4872804 0 0.3902072 0.25 0.3902072 0 0.4872804 0 0.3902072 0.75 0.4872804 0.75 0.4872804 0.25 0.4872804 0.75 0.4872804 0.5 0.375 0.5 0.375 0.75 0.125 0.75 0.125 0.5 0.125 0.5 0.375 0.5 0.3902072 0.75 0.3902072 0.75 0.3902072 0.5 0.3902072 0 0.3902072 0.25 0.3902072 0.25 0.375 0.75 0.375 0.75 0.125 0.75 0.3902072 0.75 0.3902072 1 0.375 1 0.3902072 0.5 0.3902072 0.75 0.375 0.75 0.3902072 0.25 0.3902072 0.5 0.375 0.5 0.3902072 0 0.3902072 0.25 0.375 0.25 0.125 0.75 0.125 0.75 0.125 0.5 0.3902072 0.5 0.3902072 0.5 0.3902072 0.25 0.375 0.75 0.375 0.5 0.375 0.5 0.3902072 1 0.3902072 1 0.3902072 0.75 0.4872804 0.5 0.4872804 0.75 0.3902072 0.75 0.4872804 0.25 0.4872804 0.5 0.3902072 0.5 0.4872804 0 0.4872804 0.25 0.3902072 0.25 0.4872804 0 0.3902072 0 0.3902072 0.75 0.4872804 0.25 0.4872804 0 0.4872804 0.75</float_array>
+          <technique_common>
+            <accessor source="#Cube_072-mesh-map-0-array" count="108" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Cube_072-mesh-vertices">
+          <input semantic="POSITION" source="#Cube_072-mesh-positions"/>
+        </vertices>
+        <triangles material="Wall-material" count="24">
+          <input semantic="VERTEX" source="#Cube_072-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Cube_072-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#Cube_072-mesh-map-0" offset="2" set="0"/>
+          <p>3 0 0 0 0 1 1 0 2 1 0 3 11 0 4 3 0 5 7 1 6 12 1 7 6 1 8 4 0 9 10 0 10 15 0 11 2 0 12 9 0 13 0 0 14 0 6 27 8 6 28 1 6 29 6 7 30 10 7 31 5 7 32 2 8 33 11 8 34 13 8 35 4 7 36 14 7 37 7 7 38 18 3 39 7 3 40 6 3 41 17 4 42 6 4 43 5 4 44 16 5 45 5 5 46 4 5 47 3 0 54 2 0 55 0 0 56 1 0 57 8 0 58 11 0 59 7 0 60 14 0 61 12 0 62 4 9 63 5 9 64 10 9 65 2 0 66 13 0 67 9 0 68 0 10 81 9 10 82 8 10 83 6 7 84 12 7 85 10 7 86 2 11 87 3 11 88 11 11 89 4 7 90 15 7 91 14 7 92 18 3 93 19 3 94 7 3 95 17 4 96 18 4 97 6 4 98 16 5 99 17 5 100 5 5 101</p>
+        </triangles>
+        <triangles material="dark_Wood-material" count="12">
+          <input semantic="VERTEX" source="#Cube_072-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Cube_072-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#Cube_072-mesh-map-0" offset="2" set="0"/>
+          <p>14 2 15 9 2 16 13 2 17 12 3 18 13 3 19 11 3 20 10 4 21 11 4 22 8 4 23 15 5 24 8 5 25 9 5 26 16 2 48 7 2 49 19 2 50 17 7 51 19 7 52 18 7 53 14 2 69 15 2 70 9 2 71 12 3 72 14 3 73 13 3 74 10 4 75 12 4 76 11 4 77 15 5 78 10 5 79 8 5 80 16 2 102 4 2 103 7 2 104 17 7 105 16 7 106 19 7 107</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="wall_1_001" name="wall_1.001" type="NODE">
+        <matrix sid="transform">3.93988e-8 0.03169501 0 -2.265715 -0.5218532 2.39291e-9 0 -0.6613128 0 0 1.27349 1.274601 0 0 0 1</matrix>
+        <instance_geometry url="#Cube_072-mesh" name="wall_1.001">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Wall-material" target="#Wall-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+              <instance_material symbol="dark_Wood-material" target="#dark_Wood-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>
