@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class LightGlow : MonoBehaviour
 {
+    public float speed = 0.4f;
     Light myLight;
     void Start()
     {
@@ -13,6 +14,6 @@ public class LightGlow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        myLight.intensity = Mathf.PingPong(Time.time, 2);
+        myLight.intensity = Mathf.PingPong(Time.time * speed, 1);
     }
 }
