@@ -12,7 +12,7 @@ public class TeleportEffect : MonoBehaviour
     private void Start()
     {
         cam = Camera.main;
-        basicFieldOfView = 80;
+        basicFieldOfView = 50;
     }
     public void StartEffect()
     {
