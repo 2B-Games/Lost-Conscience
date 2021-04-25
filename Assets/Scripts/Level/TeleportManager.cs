@@ -5,10 +5,7 @@ using UnityEngine;
 public class TeleportManager : MonoBehaviour
 {
     public static TeleportManager instance;
-    public GameObject allowMusicBox;
-    public GameObject worldmusicBox;
-    public GameObject emptyMusicBox;
-    public GameObject physicalMusicBox;
+
     public Transform[] spawnPosition;
     private TeleportEffect effect;
     private void Awake()
@@ -17,7 +14,6 @@ public class TeleportManager : MonoBehaviour
     }
     private void Start()
     {
-        allowMusicBox.SetActive(false);
         effect = GetComponent<TeleportEffect>();
     }
     public void MovePlayerPosition(int pos)
@@ -33,13 +29,6 @@ public class TeleportManager : MonoBehaviour
         InteractionManager.instance.HideUi(true);
         player.ActivateSound(false);
         yield return new WaitForSeconds(2);
-        if (pos == 1)
-        {
-            allowMusicBox.SetActive(true);
-            emptyMusicBox.SetActive(true);
-            worldmusicBox.SetActive(false);
-            physicalMusicBox.SetActive(false);
-        }
         effect.BackToNormal();
         InteractionManager.instance.HideUi(false);
         player.gameObject.transform.position = spawnPosition[pos].position;
